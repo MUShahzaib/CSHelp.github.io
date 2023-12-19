@@ -1,0 +1,116 @@
+{
+    "Unity": {
+        "categories": [
+            "Unity UI",
+            "Materials/Textures",
+            "Scripting"
+        ],
+        "items": [
+            {
+                "id": 1,
+                "likes": 2,
+                "views": 362,
+                "shares": 14,
+                "name": "Transparent material",
+                "publishDate": "30-Nov-2023",
+                "author": "Dummy.inc",
+                "description": "This tutorials teaches step by step how to develop/convert any material to transparent.",
+                "imageUrl": "../Images/1.jpg",
+                "category": "Materials/Textures",
+                "link": "game1-link.html",
+                "mediaSources": [
+                    "../Images/pic1.png",
+                    "../Images/pic2.png",
+                    "https://www.youtube.com/embed/boOyuySovko?si=8uuNetgRqoBNwhgr"
+                ],
+                "referenceDocument": "1S6kOioNtAuvrHzvfdoLq8coIM3edv0h",
+                "comments": []
+            },
+            {
+                "id": 2,
+                "likes": 1,
+                "views": 3,
+                "shares": 1,
+                "name": "Skybox in unity",
+                "publishDate": "30-Nov-2023",
+                "author": "Dummy.inc",
+                "description": "This tutorials teaches step by step how to develop/convert any material to transparent.",
+                "imageUrl": "../Images/1.jpg",
+                "category": "Materials/Textures",
+                "link": "game1-link.html",
+                "mediaSources": [
+                    "../Images/pic1.png",
+                    "../Images/pic2.png",
+                    "https://www.youtube.com/embed/boOyuySovko?si=8uuNetgRqoBNwhgr"
+                ],
+                "referenceDocument": "https://view.officeapps.live.com/op/view.aspx?src=your-docx-file.docx"
+            },
+            {
+                "id": 3,
+                "likes": 0,
+                "views": 3,
+                "shares": 0,
+                "name": "Test 3",
+                "publishDate": "30-Nov-2023",
+                "author": "Dummy.inc",
+                "description": "This tutorials teaches step by step how to develop/convert any material to transparent.",
+                "imageUrl": "../Images/1.jpg",
+                "category": "Materials/Textures",
+                "link": "game1-link.html",
+                "mediaSources": [
+                    "../Images/pic1.png",
+                    "../Images/pic2.png",
+                    "https://www.youtube.com/embed/boOyuySovko?si=8uuNetgRqoBNwhgr"
+                ],
+                "referenceDocument": "1dJxFSc_5-N5xKIoVV1p1DQYdOLDNxX3S"
+            }
+        ]
+    },
+    "Java": {
+        "categories": [
+            "Java Basic",
+            "Java Web",
+            "Java Problems"
+        ],
+        "items": [
+            {
+                "id": 3,
+                "likes": 0,
+                "views": 0,
+                "shares": 0,
+                "name": "Transparent material",
+                "publishDate": "30-Nov-2023",
+                "author": "Dummy.inc",
+                "description": "This tutorials teaches step by step how to develop/convert any material to transparent.",
+                "imageUrl": "../Images/1.jpg",
+                "category": "Materials/Textures",
+                "link": "game1-link.html",
+                "mediaSources": [
+                    "../Images/pic1.png",
+                    "../Images/pic2.png",
+                    "https://www.youtube.com/embed/boOyuySovko?si=8uuNetgRqoBNwhgr"
+                ],
+                "referenceDocument": "https://view.officeapps.live.com/op/view.aspx?src=your-docx-file.docx"
+            },
+            {
+                "id": 3,
+                "likes": 0,
+                "views": 0,
+                "shares": 0,
+                "name": "Transparent material",
+                "publishDate": "30-Nov-2023",
+                "author": "Dummy.inc",
+                "description": "This tutorials teaches step by step how to develop/convert any material to transparent.",
+                "imageUrl": "../Images/1.jpg",
+                "category": "Materials/Textures",
+                "link": "game1-link.html",
+                "mediaSources": [
+                    "../Images/pic1.png",
+                    "../Images/pic2.png",
+                    "https://www.youtube.com/embed/boOyuySovko?si=8uuNetgRqoBNwhgr"
+                ],
+                "referenceDocument": "https://view.officeapps.live.com/op/view.aspx?src=your-docx-file.docx"
+            }
+        ]
+    }
+}

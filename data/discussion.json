@@ -1,0 +1,62 @@
+[
+    {
+        "id": 4,
+        "subject": "Print string",
+        "type": "Java",
+        "text": "How to print a string in java",
+        "views": 0,
+        "likes": 0,
+        "shares": 0,
+        "answers": [
+            "Simply use System.out.println(your string);",
+            "Let string messa\"g\"e=something; System.out.print(message);",
+            "It is very simple.\n\nString myString=anything;\nSystem.out.println(myString);",
+            " String myString=anything; System.out.println(myString);",
+            "I dont know",
+            "string test=\"myString\";"
+        ]
+    },
+    {
+        "id": 5,
+        "subject": "traverse an array",
+        "type": "C++",
+        "text": "How to traverse an array in c++",
+        "views": 0,
+        "likes": 0,
+        "shares": 0,
+        "answers": []
+    },
+    {
+        "id": 6,
+        "subject": "HTML full form",
+        "type": "HTML",
+        "text": "What is full form of HTML or what does HTML stands for ?",
+        "views": 0,
+        "likes": 0,
+        "shares": 0,
+        "answers": [
+            "Hyper Text MarkUp Language",
+            "Its \"HyperText MarkUp Language\""
+        ]
+    },
+    {
+        "id": 7,
+        "subject": "Origin of web development ",
+        "type": "Web",
+        "text": "When was web development started and what was the reason behind it ?",
+        "views": 0,
+        "likes": 0,
+        "shares": 0,
+        "answers": []
+    },
+    {
+        "id": 8,
+        "subject": "Unity ",
+        "type": "Unity",
+        "text": "What is unity ?",
+        "views": 0,
+        "answers": [
+            "Unity is a cross-platform game engine developed by Unity Technologies\n, first announced and released in June 2005 at Apple Worldwide Developers\n Conference as a Mac OS X game engine.\n The engine has since been gradually extended to support a variety of desktop, mobile,\n console and virtual reality platforms"
+        ]
+    }
+]

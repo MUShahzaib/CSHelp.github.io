@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>App or Game details</title>
+    <link rel="stylesheet" href="style-apps-and-games-details.css">
+    <link rel="stylesheet" href="../LikeShareView/style-likeViewsShare.css">
+    <link rel="stylesheet" href="../style-common.css">
+</head>
+
+<body>
+
+
+    <br>
+  
+        <div class="overlay">
+            <div class="icon">
+                <img id="productIcon" alt="No icon">
+            </div>
+            <div class="content">
+                <h1 id="productName">App Name</h1>
+                <h5 id="developer" style="color: rgb(0, 255, 89);"> Developer </h5>
+                <div id="shared-elements" class="shared-elements">
+                    <!-- Common elements will be loaded here -->
+                </div>
+                <h3>  </h3>
+            </div>
+
+            
+            <div id="container" class="container"> 
+         
+                <div id="video-container" class="video-container">
+                    <!-- Your video content here -->
+                </div>
+            </div>
+        </div> 
+        
+        <br>
+
+    <div id="details-template">
+        
+        <div class="container-fluid " id="media">
+            <div id="image-container" class="media-container"></div>
+        </div>
+        <p id="mediaDescription"></p>
+    </div>
+
+        <!-- Place the iframe inside a container div for positioning -->
+        <div class="captcha-ParentContainer" id="captcha-ParentContainer" style="display: none;">
+            <iframe id="captcha-display" src="../Captcha/captcha.html"> </iframe>
+        </div>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="module" src="../LikeShareView/script-likeViewsShare.js"> </script>
+
+    <script type="module" src="script-apps-and-games.js"> </script>
+</body>
+
+</html>

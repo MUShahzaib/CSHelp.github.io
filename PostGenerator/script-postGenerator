@@ -1,0 +1,188 @@
+const droppableArea = document.getElementById('droppableArea');
+const toolbarButtons = document.querySelectorAll('#toolbar button');
+const imageDialog = document.getElementById('imageDialog');
+const linkDialog = document.getElementById('linkDialog');
+
+// Handle toolbar button clicks
+toolbarButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    handleToolbarButtonClick(button.id);
+  });
+});
+
+// Handle drag events
+droppableArea.addEventListener('dragover', (event) => {
+  event.preventDefault();
+});
+
+droppableArea.addEventListener('drop', (event) => {
+  event.preventDefault();
+  handleDragDrop(event.dataTransfer.getData('text'));
+});
+
+// Handle image dialog interactions
+const imageUrlInput = document.getElementById('imageUrl');
+const insertImageButton = document.getElementById('insertImageButton');
+const cancelButton = document.getElementById('cancelButton');
+
+insertImageButton.addEventListener('click', () => {
+  insertImage(imageUrlInput.value);
+});
+
+cancelButton.addEventListener('click', () => {
+  imageDialog.classList.add('hidden');
+});
+
+// Handle link dialog interactions
+const linkUrlInput = document.getElementById('linkUrl');
+const linkTextInput = document.getElementById('linkText');
+const insertLinkButton = document.getElementById('insertLinkButton');
+
+insertLinkButton.addEventListener('click', () => {
+  insertLink(linkUrlInput.value, linkTextInput.value);
+});
+
+cancelButton.addEventListener('click', () => {
+  linkDialog.classList.add('hidden');
+});
+
+// Handle drag and drop content types
+function handleDragDrop(contentType) {
+  switch (contentType) {
+    case 'text':
+      insertText(event.dataTransfer.getData('text'));
+      break;
+    case 'heading1':
+      insertHeading(1);
+      break;
+    case 'heading2':
+      insertHeading(2);
+      break;
+    case 'heading3':
+      insertHeading(3);
+      break;
+    case 'image':
+      toggleImageDialog();
+      break;
+    case 'link':
+      toggleLinkDialog();
+      break;
+    default:
+      console.warn(`Unsupported content type: ${contentType}`);
+  }
+}
+
+// Handle toolbar button clicks
+function handleToolbarButtonClick(buttonId) {
+  switch (buttonId) {
+    case 'boldButton':
+      insertBoldText();
+      break;
+    case 'italicButton':
+      insertItalicText();
+      break;
+    case 'underlineButton':
+      insertUnderlineText();
+      break;
+    case 'heading1Button':
+      insertHeading(1);
+      break;
+    case 'heading2Button':
+      insertHeading(2);
+      break;
+    case 'heading3Button':
+      insertHeading(3);
+      break;
+    case 'imageButton':
+      toggleImageDialog();
+      break;
+    case 'linkButton':
+      toggleLinkDialog();
+      break;
+    default:
+      console.warn(`Unsupported button ID: ${buttonId}`);
+  }
+}
+
+// Insert text into the editor
+function insertText(text) {
+  const paragraph = document.createElement('p');
+  paragraph.textContent = text;
+  droppableArea.appendChild(paragraph);
+}
+
+// Insert bold text
+function insertBoldText() {
+  const selection = document.getSelection();
+  if (selection && selection.toString()) {
+    const boldText = document.createElement('b');
+    boldText.textContent = selection.toString();
+    selection.deleteRange();
+    selection.insertNode(boldText);
+  }
+}
+
+// Insert italic text
+function insertItalicText() {
+  const selection = document.getSelection();
+  if (selection && selection.toString()) {
+    const italicText = document.createElement('i');
+    italicText.textContent = selection.toString();
+    selection.deleteRange();
+    selection.insertNode(italicText);
+  }
+}
+
+
+// Insert underlined text
+function insertUnderlineText() {
+  const selection = document.getSelection();
+  if (selection && selection.toString()) {
+    const underlinedText = document.createElement('u');
+    underlinedText.textContent = selection.toString();
+    selection.deleteRange();
+    selection.insertNode(underlinedText);
+  }
+}
+
+// Insert heading with specified level
+function insertHeading(level) {
+  const heading = document.createElement('h' + level);
+  const selection = document.getSelection();
+  if (selection && selection.toString()) {
+    heading.textContent = selection.toString();
+    selection.deleteRange();
+    selection.insertNode(heading);
+  } else {
+    heading.textContent = 'Enter heading text';
+    droppableArea.appendChild(heading);
+  }
+}
+
+// Insert image based on URL
+function insertImage(imageUrl) {
+  const image = document.createElement('img');
+  image.src = imageUrl;
+  image.alt = 'Image';
+  droppableArea.appendChild(image);
+  imageDialog.classList.add('hidden');
+}
+
+// Insert link with specified URL and text
+function insertLink(linkUrl, linkText) {
+  const link = document.createElement('a');
+  link.href = linkUrl;
+  link.textContent = linkText;
+  droppableArea.appendChild(link);
+  linkDialog.classList.add('hidden');
+}
+
+// Toggle image dialog visibility
+function toggleImageDialog() {
+  imageDialog.classList.toggle('hidden');
+}
+
+// Toggle link dialog visibility
+function toggleLinkDialog() {
+  linkDialog.classList.toggle('hidden');
+}

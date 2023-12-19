@@ -1,0 +1,142 @@
+/* Add your existing styles here */
+
+body{
+  background-color:antiquewhite;
+}
+
+header {
+ 
+    height: 150px;
+    text-align: center;
+    /* padding: 20px; */
+    background-color:burlywood;
+    color: white;
+    /* position:fixed; */
+    
+}
+
+
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+select {
+    margin: 10px;
+    padding: 5px;
+}
+
+input {
+    margin: 10px;
+    padding: 5px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sorts-drop-down {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+.favourites-button {
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#items-container {
+    display:grid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+.item-block {
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);  
+    cursor: pointer;
+  }
+
+  .item-block:hover{
+    scale: 1.01;
+  }
+  
+  .left-section {
+    width: 40%;
+  }
+  
+  .icon-image {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+   
+  }
+  
+  .right-section {
+    width: 60%;
+    padding-left: 20px;
+    text-align: center;
+  }
+  
+  .item-name {
+    margin-top: 0;
+  }
+  
+  
+
+  .like-share-view{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+  }
+
+  .button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    min-height: 35px;
+    text-align: center;
+    
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.paginationButtons{
+   display: flex;
+   justify-content:space-evenly;
+}
+
+
+
+

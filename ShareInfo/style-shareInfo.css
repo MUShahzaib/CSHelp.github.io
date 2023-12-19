@@ -1,0 +1,18 @@
+
+
+/* Styles for the sharing buttons */
+#sharingOptionsDialog button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #0074c2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sharingOptionsDialog button:hover {
+    background: #005b91;
+}
+

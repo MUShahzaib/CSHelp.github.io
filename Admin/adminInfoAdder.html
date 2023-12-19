@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-adminInfoAdder.css">
+
+  <title>CS HELP</title>
+
+</head>
+
+<body>
+
+
+<div id="add-notification-popup" class="popup">
+    <div class="popup-content">
+      <h2 class="popup-heading">Add Notification</h2>
+      <form id="add-notification-form" action="#">
+        <label for="notification-title">Notification Title:</label>
+        <input type="text" id="notification-title" name="notification-title" maxlength="100" required>
+  
+      
+        <label for="notification-details">Details:</label>
+        <textarea id="notification-details" name="notification-details" maxlength="500" required></textarea>
+  
+      
+        <label for="notification-link">Link:</label>
+        <input type="text" id="notification-link" name="notification-link" maxlength="200">
+  
+        <br><br>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../Firebase/firebase.js" type="module"> </script>
+</body>
+
+</html>

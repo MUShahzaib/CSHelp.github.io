@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post/Page Editor</title>
+  <link rel="stylesheet" href="style-postGenerator">
+</head>
+<body>
+  <div id="toolbar">
+    <button id="boldButton"><b>B</b></button>
+    <button id="italicButton"><i>I</i></button>
+    <button id="underlineButton"><u>U</u></button>
+    <button id="heading1Button">H1</button>
+    <button id="heading2Button">H2</button>
+    <button id="heading3Button">H3</button>
+    <button id="imageButton">Insert Image</button>
+    <button id="linkButton">Insert Link</button>
+  </div>
+
+  <div id="editor">
+    <div id="droppableArea"></div>
+  </div>
+
+  <div id="imageDialog" class="hidden">
+    <input type="text" id="imageUrl" placeholder="Enter image URL">
+    <button id="insertImageButton">Insert Image</button>
+    <button id="cancelButton">Cancel</button>
+  </div>
+
+  <div id="linkDialog" class="hidden">
+    <input type="text" id="linkUrl" placeholder="Enter link URL">
+    <input type="text" id="linkText" placeholder="Enter link text">
+    <button id="insertLinkButton">Insert Link</button>
+    <button id="cancelButton">Cancel</button>
+  </div>
+
+  <script src="script-postGenerator"></script>
+</body>
+</html>

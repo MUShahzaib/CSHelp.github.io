@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-tutorials.css">
+    <link rel="stylesheet" href="../style-common.css">
+    <link rel="stylesheet" href="../styles-animations.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Tutorials Page</title>
+</head>
+
+<body>
+    <header>
+    </br>
+        <h1>Tutorials</h1>
+        </br>
+        <select id="categories-list">
+            <option value="All">All Categories</option>
+        </select>
+        <input type="text" id="search-bar" placeholder="Search tutorials...">     
+        
+       
+    </br>
+</header>
+
+</br>
+<div class="filter-section">
+    <div class="sorts-drop-down">
+        <label> Sort By :</label>
+      <select id="sorts-list" class="sorts-list">
+        <option value="all">All</option>
+        <option value="date">Sort by Date</option>
+        <option value="likes">Sort by Likes</option>
+        <option value="name">Sort by Name</option>
+      </select>
+    </div>
+
+    <!-- <a href="../DiscussionForum/discussion.html" class="favourites-button">Discussion Forum</a> -->
+
+    <a href="#" class="favourites-button">Your Favourites</a>
+  </div>
+    
+    <div id="items-container">
+      
+        <!-- Items will be added dynamically here -->
+    </div>
+
+
+
+    <div class="item-block" id="item-block" style="display: none;">
+
+        <div class="left-section" id="left-section">
+
+            <image class="icon-image" id="icon-image" >
+
+            </image>
+        </div>
+
+        <div class="right-section" id="right-section">
+
+            <h3 class="item-name" id="item-name"> </h3>
+            <h5 class="item-added-date"> Date Added : </h5>
+
+            <p class="item-description" id="item-description">   </p>
+        </br>
+
+            <div class="like-share-view">
+
+                 <i> 
+                    <iconify-icon icon="ph:heart" width="32" height="32" class="rotate-vert-center"></iconify-icon>
+                    <h3 class="likesLabel" id="likesLabel"> </h3>
+                </i>
+
+               <i>
+                <iconify-icon icon="ion:arrow-redo-circle-outline" width="32" height="32">                   
+                </iconify-icon>
+                <h3 class="sharesLabel" id="sharesLabel"> </h3>
+               </i>
+
+                <i>
+                    <iconify-icon icon="et:camera" width="32" height="32"></iconify-icon>
+                    <h3 class="viewsLabel" id="viewsLabel"> </h3>
+                </i>
+
+            </div>
+        </br>
+
+            <a class="button download-button" id="download-button"> Download</a>
+
+         
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+    <!-- we will try to add the pagination later  -->
+    <!-- <div class="paginationButtons">
+    <a type="button" class="favourites-button" id="next-page"  style=" background-color: #ff8800; height: 20px; width: 100px;"> Previous</a>
+    <a type="button" class="favourites-button" id="previous-page" style=" background-color: #ff8800; height: 20px; width: 100px;"> Next</a>
+    </div> -->
+
+
+ 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="module" src="script-tutorials.js"></script>
+</body>
+
+</html>

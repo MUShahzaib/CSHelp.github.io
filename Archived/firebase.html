@@ -1,0 +1,106 @@
+<!-- firebase.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-index.css">
+
+    <!-- Include Firebase JavaScript files here -->
+</head>
+
+<body>
+
+    <table id="notification-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here  -->
+        </tbody>
+    </table>
+
+
+ 
+
+
+    <!-- Your Firebase code here -->
+    <script type="module">
+
+
+
+
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js';
+        import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js';
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAI1Sbt9Gcp1Z3Trtsj6cD4TDMBPI5oUcs",
+            authDomain: "cshelp-a57e9.firebaseapp.com",
+            projectId: "cshelp-a57e9",
+            storageBucket: "cshelp-a57e9.appspot.com",
+            messagingSenderId: "346632228186",
+            appId: "1:346632228186:web:955db68a4aea20493e7763",
+            measurementId: "G-Q3YJ3C0B5P"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app); // Use getFirestore to get Firestore instance
+
+
+        function getNotifications() {
+
+            // Reference to the Firestore "Notification" collection
+            const notificationsRef = collection(db, "Notification");
+
+            // Fetch data from Firestore and populate the table
+            getDocs(notificationsRef).then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const title = doc.data().Title;
+                    const message = doc.data().Message;
+                    const link = doc.data().link;
+
+                    // Create a new row for each notification
+                    //const table = document.getElementById(myDiv);
+                    // Access the parent window (index.html)
+                    // Get the table ID from the URL query parameter
+                    // Access the table element in the parent window (index.html)
+                    const table = document.getElementById("notification-table");
+
+                    const row = table.insertRow();
+
+                    // Create cells for Title and Message
+                    const titleCell = row.insertCell(0);
+                    const messageCell = row.insertCell(1);
+
+                    titleCell.textContent = title;
+                    messageCell.textContent = message;
+
+                    // Add a link to the row (if link exists)
+                    if (link) {
+                        row.style.cursor = "pointer";
+                        row.addEventListener("click", () => {
+                            window.location.href = link;
+                        });
+                    }
+                });
+            });
+        }
+
+        window.addEventListener('load', getNotifications);
+
+
+        
+ </script>
+</body>
+
+</html>

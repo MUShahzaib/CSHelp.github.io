@@ -1,0 +1,54 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color:beige
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+
+#addMediaField {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for better user experience */
+#addMediaField:hover {
+    background-color: #005b91;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="url"]{
+    width: 93%;
+    height: 40px;
+}
+
+
+

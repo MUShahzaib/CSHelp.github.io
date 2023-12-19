@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-upload.css">
+    <title>Upload Info</title>
+</head>
+<body>
+    <h1>Upload Info</h1>
+    <form id="uploadForm" class="uploadForm">
+        <label for="tutorialTitle">Title:</label>
+        <input type="text" id="tutorialTitle" name="tutorialTitle" placeholder="Max 100 words" required maxlength="100">
+
+        <label for="tutorialDescription">Description:</label>
+        <textarea id="tutorialDescription" name="tutorialDescription" rows="5" placeholder="Max 500 words" maxlength="500"></textarea>
+
+        <label for="authorName">Author:</label>
+        <input type="text" id="authorName" name="authorName" placeholder="Max 100 words" required maxlength="100">
+
+        <label for="imageUpload">Icon Link:</label>
+        <input class="urlField" type="url" name="imageUpload" placeholder="https://example.com" required > 
+        <!-- <form> -->
+            <!-- <input type="file" id="imageUpload" accept="image/*"> -->
+            <!-- <img id="uploadedImage" src="" alt="Uploaded Image" style="max-width: 200px; max-height: 200px;"> -->
+        <!-- </form> -->
+
+             
+        <!-- <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required> -->
+
+        <label for="tutorialLink">Download link:</label>
+        <input type="text" id="tutorialLink" name="tutorialLink" placeholder="https://example.com" required>
+
+        <label for="tutorialMedia">Media Links:</label>
+        <div id="mediaFields">
+            <input type="url" name="tutorialMedia[]" placeholder="https://example.com" required>
+        </div>
+        <br>
+        <button type="button" id="addMediaField">More</button>
+
+        <label for="tutorialType">Type:</label>
+        <select id="tutorialType" name="tutorialType" required>
+            <option value="app">App</option>
+            <option value="game">Game</option>
+            <option value="tutorial">Tutorial</option>
+        </select>
+
+        <label for="tutorialCategory">Category:</label>
+        <select id="tutorialCategory" name="tutorialCategory" required>
+            <!-- Options will be added dynamically based on the selected type -->
+        </select>
+
+
+
+        <label for="documentReference">Document Reference:</label>
+        <input type="file" id="documentrefernce" name="documentReference"  accept=".pdf ,.txt"> <!--"Document/*" for all documents-->
+        <!-- <input type="text" id="documentReference" name="documentReference" required> -->
+
+        <!-- <button type="submit">Upload</button> -->
+
+        <br><br><br>
+        <!-- Add the following buttons after your form fields -->
+        <button type="reset" id="cancelButton">Cancel</button>
+        <button  id="saveButton">Save</button>
+
+    </form>
+    <script src="script-upload.js"></script>
+
+
+</body>
+</html>

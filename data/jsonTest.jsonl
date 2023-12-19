@@ -1,0 +1,24 @@
+[
+    {
+        "id": 4,
+        "subject": "Print string",
+        "text": "How to print a string in java",
+        "answers": [
+            "Simply use System.out.println(your string);",
+            "Let string message=something; System.out.print(message);",
+            "It is very simple.\n\nString myString=anything;\nSystem.out.println(myString);"
+        ]
+    },
+    {
+        "id": 5,
+        "subject": "traverse an array",
+        "text": "How to traverse an array in c++",
+        "answers": []
+    },
+    {
+        "id": 6,
+        "subject": "HTML full form",
+        "text": "What is full form of HTML or what does HTML stands for ?",
+        "answers": []
+    }
+]

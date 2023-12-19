@@ -1,0 +1,144 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the container for the details */
+#details-template {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Style the media (image) */
+#media {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* CSS for media container */
+
+
+.media-container {
+    width: 100%;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent media items from wrapping to the next line */
+    max-height: 512px; /* Adjust the maximum height as needed */
+}
+
+/* Style for individual media items (optional) */
+.media-item {
+   
+    display: inline-block; /* Display media items horizontally */
+    margin-right: 10px; /* Add some spacing between media items */
+    max-width: 100%;
+    width: 100%; /* This ensures the video takes the full width of its container */
+    /* padding-bottom: 56.25%; 16:9 aspect ratio (9 / 16 * 100) */
+}
+
+/* Add CSS to style the layout */
+.container {
+     
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    height: 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    
+    max-width: 600px;
+    
+}
+
+
+
+
+.icon {
+    align-self: flex-end; /* Move the icon to the right */
+}
+
+
+.content {
+    text-align: center; /* Center-align the content */
+}
+
+.video-container {
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Adjust as needed */
+    position: relative; /* Ensure video fills the container */
+    overflow: hidden; /* Hide overflowing video content */
+    
+}
+
+.video-container video {
+    
+    width: 100%;
+    height: 100%;
+    /* max-width: 800px; */
+    object-fit: cover; /* Cover the entire container */
+}
+
+
+/* CSS for scroll buttons */
+.scroll-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Position the scroll buttons (you can adjust the positioning as needed) */
+#prev-button {
+    margin-right: 10px;
+}
+
+/* Style the download button */
+#appDownloadButton,.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#appDownloadButton:hover {
+    background-color: #0056b3;
+}
+
+/* Style the app description */
+#appDescription {
+    font-size: 16px;
+    line-height: 1.5;
+}

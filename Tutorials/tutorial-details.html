@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://drive.google.com;"> -->
+
+    <title>Tutorial details</title>
+    <link rel="stylesheet" href="style-tutorial-details.css">
+    <link rel="stylesheet" href="../LikeShareView/style-likeViewsShare.css">
+    <link rel="stylesheet" href="../style-common.css">
+    <script src="https://kit.fontawesome.com/e74a4d5132.js" crossorigin="anonymous"></script>
+    <!-- Add this to the <head> section of your HTML document -->
+
+</head>
+
+<body>
+
+    <br>
+
+    <div class="overlay">
+        <div class="icon">
+            <img id="productIcon" alt="No icon">
+        </div>
+        <div class="content">
+            <h1 id="productName">Product Name</h1>
+            <h3 id="developer" style="color: rgb(255, 0, 0);"> Developer </h3>
+            <!--<a class="download-button button" id="mediaDownloadButton">Download / Buy</a>
+             <h5 id="tutorialViewsLabel"> 0 </h5>
+            <a class="share-button button" id="mediaShareButton" target="_blank">Share <label id="tutorialSharesLabel">
+                    0 </label></a>
+            <a class="likeButton button" id="likesButton"> <img id="likesImage" src="../Images/emptyHeart.png"
+                    height="15px"> </img> <label id="tutorialLikesLabel"> 0 </label></a> -->
+            <!-- <button class="likeButton button" id="likeButton"> <img src="../Images/heart.png" height="20px"> </img> <label id ="tutorialLikesLabel"> 0 </label></button> -->
+            <!-- Include the div where you want to load the common elements -->
+            <div id="shared-elements" class="shared-elements">
+                <!-- Common elements will be loaded here -->
+            </div>
+            <h3> </h3>
+        </div>
+
+
+        <h2> Description/Code :</h2>
+
+        <div class="mediaDescription">
+            <div class="copyContainer">
+                <i id="codeCopyButton" class="fa-regular fa-copy fa-bounce"> </i>
+            </div>
+            <br>
+            <p id="mediaDescription"> </p>
+            <br>
+        </div>
+
+        <br>
+
+        <h2> Video Tutorial :</h2>
+        <div id="container" class="container" style="width: 90%;">
+
+            <div id="video-container" class="video-container">
+                <!-- Your video content here -->
+            </div>
+
+        </div>
+
+        <br>
+
+
+        <h2> Document :</h2>
+        <div id="details-template" style="width: 90%;">
+            <iframe id="document-frame" class="document-frame"> </iframe>
+            <!-- <embed id="document-frame" class="document-frame"> -->
+        </div>
+
+        <!-- Place the iframe inside a container div for positioning -->
+        <div class="captcha-ParentContainer" id="captcha-ParentContainer" style="display: none;">
+            <iframe id="captcha-display" src="../Captcha/captcha.html"> </iframe>
+        </div>
+
+        <!-- this div will have all comments and their replies -->
+        <h2> Comments :</h2>
+        <div id="commentSection" class="mediaDescription"> 
+
+        </div>
+
+        <br>
+    </div>
+    <br>
+
+    <div>
+
+        <button class="button"> Previous Tutorial </button>
+        <button class="button"> Next Tutorial </button>
+
+    </div>
+
+    <!-- <script src="../Captcha/script-captcha-verification.js"> </script> -->
+    <!-- following will load the specific div from likeshareView.html into shared-elements div in this file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="module" src="../LikeShareView/script-likeViewsShare.js"> </script>
+    <script type="module" src="script-tutorials.js"> </script>
+
+</body>
+
+</html>

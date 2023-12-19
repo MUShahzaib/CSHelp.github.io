@@ -1,0 +1,189 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+    /* background-color:rgb(250, 245, 202); */
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+   
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    background-color:beige;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add bottom margin to create space between lines */
+    cursor: pointer;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.questions-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-card {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.question-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.question-card p {
+    font-size: 16px;
+}
+
+.modal {
+    overflow-y: scroll;
+    display: none;
+    position: fixed;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-content {
+    max-width: 70%;
+    /* max-width: 800px; */
+    background-color: #fff;
+    min-width: 250px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.answersModal{
+    
+    min-height: 300px;
+    /* max-height: 1200px; */
+    max-height: fit-content;
+}
+
+/* Center answers and add-answer panel */
+.answers-container {
+    /* max-height: 70%; */
+    /* max-height: 300px; */
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.questionText,.answerText{
+    max-height: 100px;
+    overflow-y: auto;
+    min-width: 95%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.add-answer-panel {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the new answer textarea and button */
+#newAnswerText {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#addAnswerBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+/* Add this to your CSS file */
+.answer-card {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 90%;
+    max-width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.likeCopy {
+    display: flex;
+    justify-content: space-between;
+  }

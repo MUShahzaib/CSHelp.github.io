@@ -1,0 +1,50 @@
+/* Style the download button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    flex-direction: row;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Styles for the sharing dialog */
+
+/* no need for following css as i have added common screen-overlay class to sharingDialog */
+/* #sharingDialog {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: #0000006b; 
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  } */
+
+.sharingDialogChild{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 20px; /* Padding around the iframe */
+}
+
+.sharingDialogChild iframe{
+    width: 100%;
+    height: 100%;
+}
+

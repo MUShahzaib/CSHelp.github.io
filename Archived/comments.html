@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <style>
+        /* Add CSS styles for comments here */
+    </style>
+</head>
+<body>
+    <div id="comments">
+        <!-- Comments will be displayed here dynamically -->
+    </div>
+    <div>
+        <textarea id="commentInput" placeholder="Leave a comment..."></textarea>
+        <button onclick="addComment()">Submit</button>
+    </div>
+
+    <script>
+        // Sample data structure for comments
+        const commentsData = [
+            { id: 1, text: "This is the first comment", replies: [] },
+            { id: 2, text: "Another comment", replies: [
+                { id: 3, text: "Reply to the second comment" }
+            ] },
+        ];
+
+        // Function to display comments
+        function displayComments() {
+            // Fetch comments from the data (or your server)
+            const comments = commentsData;
+
+            // Iterate through comments and display them
+            const commentsContainer = document.getElementById("comments");
+            commentsContainer.innerHTML = "";
+
+            comments.forEach(comment => {
+                const commentDiv = document.createElement("div");
+                commentDiv.innerHTML = comment.text;
+
+                // Display replies if available
+                if (comment.replies.length > 0) {
+                    const repliesList = document.createElement("ul");
+                    comment.replies.forEach(reply => {
+                        const replyItem = document.createElement("li");
+                        replyItem.innerHTML = reply.text;
+                        repliesList.appendChild(replyItem);
+                    });
+                    commentDiv.appendChild(repliesList);
+                }
+
+                commentsContainer.appendChild(commentDiv);
+            });
+        }
+
+        // Function to add a new comment
+        function addComment() {
+            const commentInput = document.getElementById("commentInput");
+            const newCommentText = commentInput.value;
+
+            // Add the new comment to the data (or send to your server)
+            commentsData.push({ id: commentsData.length + 1, text: newCommentText, replies: [] });
+
+            // Clear the input field
+            commentInput.value = "";
+
+            // Update the displayed comments
+            displayComments();
+        }
+
+        // Initial display of comments
+        displayComments();
+    </script>
+</body>
+</html>

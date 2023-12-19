@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum</title>
+    <link rel="stylesheet" href="style-discussion.css">
+    <link rel="stylesheet" href="../LikeShareView/style-likeViewsShare.css">
+    <link rel="stylesheet" href="../style-common.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Discussion Forum</h1>
+            <br>
+            <button id="addQuestionBtn">Add Question</button>
+            <button id="favouritesBtn">Favourites</button>
+            <button id="yourQuestionBtn">Your Questions</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Questions">
+            <br><br>
+            <div class="filter-section" style="display: flex; justify-content: space-around;">
+                
+                <div class="filters" >
+                    <label> Filter Type :</label>
+            <select name="types" id="filterByType" class="questionTypes" style="padding-left: 30px;min-width: 200px;
+             max-width: 600px;height: 50px; ">
+
+                <!-- the defualt all value selected -->
+                <option value="All">All</option>
+            </select>
+        </div>
+
+            <div class="sorts" >
+                    <label> Sort By :</label>
+                  <select id="sorts-list" class="sorts-list" style="height: 50px;">
+                    <option value="all">All</option>
+                    <option value="date">Sort by Date</option>
+                    <option value="likes">Sort by Likes</option>
+                    <option value="name">Sort by Name</option>
+                  </select>
+                </div>
+        </div> <br> <br>
+        <div class="questions-container" id="questionsContainer">
+            <!-- Questions will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div id="addQuestionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Welcome to the Discussion Forum</h2>
+            <form id="questionForm">
+
+                <div class="form-group">
+                    <label for="questionSubject">Question Subject:</label>
+                    <input type="text" id="questionSubject" required placeholder="Max words 75" maxlength="75"
+                        style="min-width: 95%;">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label for="types" style="padding-right: 100px;"> Type: </label><br>
+                    <select name="types" class="questionTypes" id="questionTypes"
+                        style="padding-left: 30px;min-width: 250px; max-width: 600px;height: 50px;">
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="questionText">Question Text:</label><br>
+                    <textarea id="questionText" rows="5" required class="questionText"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="viewQuestionModal" class="modal">
+        <div class="modal-content answersModal">
+            <span class="close" id="closeViewModal">&times;</span>
+            <h2>Question:</h2>
+            <h3 id="viewQuestionSubject"></h3>
+            <p id="viewQuestionText"></p>
+            <div id="share-elements" class="share-elements">
+                <!-- share elements will be loaded here -->
+            </div>
+            <div class="add-answer-panel">
+                <form id="answerForm">
+                    <textarea id="answerTextArea" required placeholder="Type your answer..." rows="5"
+                        class="answerText"></textarea>
+                    <br><br>
+                    <button type="submit">Add Answer</button>
+                </form>
+            </div>
+            <h3>Answers:</h3>
+            <div class="answers-container" id="answersContainer">
+                <!-- Answers will be displayed here -->
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- following div is that whose copies we will develop for answer cards -->
+    <div class="answer-card" id="answer-card" style="display: none;">
+
+        <pre class="answerText" id="answerText">
+
+        </pre>
+
+
+        <div class="likeCopy">
+            <div id="like-elements" class="like-elements">
+                <!-- like elements will be loaded here -->
+
+            </div>
+            <button class="copy-Button button">
+                Copy
+            </button>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Define the dropdown HTML as a template -->
+    <template id="dropdownTemplate">
+        <option value="Java">Java</option>
+        <option value="HTML">HTML</option>
+        <option value="Unity">Unity</option>
+        <option value="Web">Web</option>
+        <option value="Other">Other</option>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="module" src="../LikeShareView/script-likeViewsShare.js"> </script>
+    <script type="module" src="script-discussion.js"></script>
+</body>
+
+</html>

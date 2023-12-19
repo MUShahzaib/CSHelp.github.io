@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style-likeViewsShare.css"> -->
+
+
+    <title>CS HELP</title>
+
+</head>
+
+<body>
+
+    <div id="downloadLikeShareView" class="downloadLikeShareView">
+        <a class="download-button button" id="mediaDownloadButton">Download / Buy</a>
+        <div id="likeViewsShare" class="likeViewsShare">
+            <h5 id="viewsLabel"> 0 </h5>
+            <div id="likeShare" class="likeShare">
+                <div class="sharing-container">
+                    <a class="share-button button" id="mediaShareButton" target="_blank">Share <label id="sharesLabel">
+                            0 </label></a>
+                    <!-- HTML for the custom sharing dialog -->
+                    <div id="sharingDialog" class="screen-overlay" style="display: none;">
+                        <!-- this will serve as overlay-->
+                        <div class="sharingDialogChild"> <!-- this will position div in center of screen-->
+                            <iframe src="../ShareInfo/shareInfo.html"> </iframe>
+                            <button id="closeDialog">&#10006;</button>
+                        </div>
+                    </div>
+                </div>
+                    <a class="likesButton button" id="likesButton"> <img id="likesImage" src="../Images/emptyHeart.png"
+                            height="15px"> </img> <label id="likesLabel"> 0 </label></a>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="script-likeViewsShare.js"> </script> -->
+
+</body>
+
+</html>

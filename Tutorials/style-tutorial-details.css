@@ -1,0 +1,143 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color:burlywood;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Courier New', Courier, monospace */ /* it will be ok for code block */
+    
+}
+
+iframe{
+
+    width: 100%;;
+    
+}
+
+
+/* Style the container for the details */
+#details-template {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    
+}
+
+
+/* Add CSS to style the layout */
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    /* background-color: rgba(0, 0, 0, 0.7); Add a semi-transparent background */
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    width: 60%;
+    
+   
+    
+}
+
+
+
+
+.icon {
+    align-self: flex-end; /* Move the icon to the right */
+}
+
+.content {
+    text-align: center; /* Center-align the content */
+}
+
+
+.video-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+   
+}
+
+
+
+.document-frame{
+
+    min-height:1000px;
+    width: 100%;
+}
+
+/* CSS for scroll buttons */
+.scroll-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Position the scroll buttons (you can adjust the positioning as needed) */
+#prev-button {
+    margin-right: 10px;
+}
+
+
+/* Style the app description */
+#mediaDescription {
+    font-size: 16px;
+    line-height: 1.5;
+    /* font-family:'Courier New', Courier, monospace */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mediaDescription{
+    min-height: 200px;
+    width: 90%;
+    height: 100%;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+  
+.copyContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+  .copyContainer i {
+    position: relative;
+    top: -25px;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
