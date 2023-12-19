@@ -1,0 +1,323 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    /* padding: 20px 0; */
+}
+
+.name-logo {
+    /* text-align: center; */
+    margin-top: -25px;
+    font-family: cursive,'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #E50914; /* Netflix red color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, text-shadow 0.2s;
+    cursor: pointer;
+}
+
+
+
+/* Style the header container */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Change this to your header's background color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    color: #fff; /* Text color for the header */
+}
+
+/* Style the login button */
+#login-button {
+width: 50px;
+height: 50px;
+    background-color: hsl(211, 100%, 50%); /* Change this to your button's background color */
+    color: #fff; /* Text color for the button */
+     /* padding: 10px 20px; Adjust padding as needed */
+    border:#333;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    
+
+    
+/* Position the login button on the top right corner */
+    margin-left: auto; /* Push the button to the right */
+}
+
+#login-button:hover{
+
+   scale: 1.1;
+
+}
+
+/* Make the login iframe responsive*/
+iframe {
+    width: 100%;
+    height: 100%;
+  } 
+
+.logo {
+    width: auto; /* Adjust the size of your logo */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    animation: moveLogo 6s linear infinite alternate; /* Animation properties */
+}
+
+/* Keyframes for the animation */
+@keyframes moveLogo {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust the distance as needed */
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+
+/* Navigation Menu */
+.menu {
+    
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background-color: #555;
+    padding: 10px 0;
+	
+}
+
+/* Responsive menu */
+/* @media screen and (max-width: 600px) {
+    .menu {
+      flex-wrap: wrap;
+    }
+  } */
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+/* Description and Notification Blocks */
+.description {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 1000px;
+    max-height: fit-content;
+    /* min-height: 900px; */
+     /* background-color:rgb(167, 208, 243); */
+    background-color:wheat;
+    
+}
+
+.description-block {
+    width: 55%;
+    padding-left: 2%;
+    padding: 2% 2% 2% 2%;   
+    /* background-color:aliceblue; */
+    background-color: beige;
+}
+
+
+
+.notification-block {
+    position: fixed;	
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 40%;
+    min-width: 250px;
+    
+    height: 35%; 
+    border: 1px solid #ddd; /* Optional: Add a border for visual separation */
+    background-color: #939292;
+    overflow:hidden;
+    /* padding: 20px; Add some padding for better appearance */
+
+}
+
+
+.notification-block h3{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding-top: 5%;
+}
+
+
+.notification-area{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll; /*Add a vertical scroll bar if content overflows */
+}
+
+
+#notification-table {    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Adjust as needed */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#notification-table th {
+    background-color: #f2f2f2; /* Header background color */
+    text-align: left;
+    padding: 8px;
+}
+
+#notification-table tr{
+    background-color: rgb(255, 255, 255);
+    border-style:double;
+}
+
+/* #notification-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Even row background color 
+} */
+
+#notification-table td {
+    padding: 8px;
+    border: 1px solid #ddd; /* Border for table cells */
+}
+
+
+/* Style the pop-up container */
+.feedback-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+/* Style the pop-up content */
+.popup-content {
+    background-color: #fff;
+    width: 60%;
+    max-width: 450px;
+    height: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+/* Feedback Section */
+
+.feedback-form {
+    margin-top: 10px;
+    width: 100%;
+    height: 80%;
+}
+
+.feedback-textarea {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    background-color: #f4f4f4;
+    resize: none;
+    overflow: scroll;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.contact ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact li {
+    margin-bottom: 10px;
+}
+
+
+/*
+
+Following is css styling of feedback form
+
+*/
+
+
+/* Style the close button (the 'x' in the corner) */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/*
+.notification-block::-webkit-scrollbar { 
+     display: none;  Safari and Chrome 
+}
+*/
+
+
+

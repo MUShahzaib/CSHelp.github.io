@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-index.css">
+  <link rel="stylesheet" href="style-common.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>CS HELP</title>
+
+  <style>
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="login-header ">
+
+      <button id="login-button" onclick="openModal()">
+
+        <!-- <a href="Login/Login.html"> -->
+        <img src="Images/lock.png" alt="Login">
+
+        </img>
+
+      </button>
+
+    </div>
+
+    <!-- <nav> -->
+      <div class="logo name-logo">
+        <h1> CS HELP </h1>
+         <!-- <img src="Images/logo.png" alt="Website logo">  -->
+      </div>
+
+      <!-- <ul class="menu">
+        <li><a href="AppsAndGamesPage/apps-and-games.html?dataType=games">Games</a></li>
+        <li><a href="AppsAndGamesPage/apps-and-games.html?dataType=apps">Apps</a></li>
+        <li class="dropdown">
+          <a href="#">Languages</a>
+          <div class="dropdown-content">
+            <a href="#">C#</a>
+            <a href="Tutorials/tutorials.html?dataType=Java">Java</a>
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">PHP</a>
+          </div>
+        </li>
+        <li><a href="#" id="feedback-link">Feedback</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" id="contact-link">Contact</a></li>
+        <li><a href="downloadsPage/download.html">Downloads</a></li>
+        <li class="dropdown">
+          <a href="#">Courses</a>
+          <div class="dropdown-content">
+            <a href="Tutorials/tutorials.html?dataType=Unity">Unity</a>
+            <a href="#">Gaming</a>
+            <a href="#">Algorithms</a>
+            <a href="#">DataStructures</a>
+            <a href="#">AI</a>
+          </div>
+        </li>
+        <li id="notification-show-link"><a href="#">Announcements</a></li>
+        <li><a href="DiscussionForum/discussion.html"> DiscussionForum </a></li>
+      </ul>
+    </nav> -->
+
+ <br>
+
+   <div>
+    <nav class="navbar navbar-inverse  menu sticky-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="AppsAndGamesPage/apps-and-games.html?dataType=games">Games</a></li>
+          <li><a href="AppsAndGamesPage/apps-and-games.html?dataType=apps">Apps</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown"  href="#languages">Languages<span class="caret"></span></a>
+              <div class="dropdown-content" >
+                <a href="#">C#</a>
+                <a href="Tutorials/tutorials.html?dataType=Java">Java</a>
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">PHP</a>
+              </div>
+            </li>
+            <li><a href="#" id="feedback-link">Feedback</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+            <li><a href="downloadsPage/download.html">Downloads</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle dropright" data-toggle="dropdown" href="#cources">Courses<span class="caret"></span></a>
+              <div class="dropdown-content">
+                <a href="Tutorials/tutorials.html?dataType=Unity">Unity</a>
+                <a href="#">Gaming</a>
+                <a href="#">Algorithms</a>
+                <a href="#">DataStructures</a>
+                <a href="#">AI</a>
+              </div>
+            </li>
+            <li id="notification-show-link"><a href="#">Announcements</a></li>
+            <li><a href="DiscussionForum/discussion.html"> DiscussionForum </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        <!-- <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul> -->
+      </div>
+    </div>
+    </nav>
+            </div>
+    </header> 
+
+
+
+  <section class="description" id="description">
+    <div class="description-block" id="description-block">
+      <!--<p>This website is dedicated to computer science. We offer a variety of free and paid courses, tutorials, 
+		and downloadable products and apps.</p> -->
+      <iframe src="description.html"  frameborder="0" ></iframe>
+    </div>
+  </section>
+
+  <div id ="screen-overlay" class="screen-overlay">
+
+  </div>
+
+    <div class="notification-block" id="notification-block" >
+      <span class="close" id="close-notification-popup">&times;</span>
+      <h3 id="notification-title">  Alerts !</h3>
+      <div class="notification-area" >
+
+      <table id="notification-table"  >
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Detail</th>
+          </tr>
+          
+        </thead>
+        
+        <tbody>
+          <!-- Data will be inserted here  -->
+        </tbody>
+      </table>
+
+      </div>
+    </div>
+
+
+ 
+
+
+    <div id="feedback-popup" class="feedback-popup">
+      <div class="popup-content">
+      <span class="close-popup close" id="close-feedback-popup">&times;</span>
+      <h2>Give Feedback</h2> <br>
+      <form id="feedback-form" class="feedback-form"><!-- action="https://sheetdb.io/api/v1/hatfrnrxco64q" method="post"> -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="UserName" value="Anonymous User" readonly>
+        <br><br>
+        <label for="feedback-textarea">Your Feedback:</label><br><br>
+        <textarea class="feedback-textarea" id="feedback-textarea" required placeholder="Type your feedback..." name="Feedback"></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+  </div>
+
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <ul>
+      <li>Email: mshahzaib6699@gmail.com</li>
+      <li>Phone: +1 123-456-7890</li>
+      <li>Address: 123 Street, City, Country</li>
+    </ul>
+  </section>
+
+  <!-- Add this button at the bottom of your page -->
+  <button id="scroll-to-top-button" onclick=" scrollToTop()">
+    <img src="Images/Arrow-up.jpg" alt="Scroll to Top" class="scroll-image">
+  </button>
+
+  <!-- Add a modal container -->
+<div id="myModal" class="myModal" >
+    <!-- Include the content of your login form here -->
+
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id ="login-iframe" src="Login/Login.html"></iframe>
+</div>
+
+
+
+
+  <script src="script-index.js"></script>
+  <script src="script-common.js"> </script>
+
+
+  <!---- <script src="script-apps-and-games.js"> </script>  -->
+
+  <!-- <script src="http://127.0.0.1:5500/Firebase/firebase.js" type="module"> -->
+    <script src="http://localhost:5500/Firebase/firebase.js" type="module"> 
+
+
+
+
+  </script>
+
+</body>
+
+</html>
